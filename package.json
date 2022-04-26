@@ -7,6 +7,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@capacitor/cli": "^3.5.0",
     "nuxt": "3.0.0-rc.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^3.5.0",
+    "@capacitor/core": "^3.5.0"
   }
 }

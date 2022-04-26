@@ -1,0 +1,6 @@
+{
+	"appId": "com.nuxt.test",
+	"appName": "nuxt-app",
+	"webDir": ".output/public",
+	"bundledWebRuntime": false
+}
