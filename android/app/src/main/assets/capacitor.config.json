@@ -2,5 +2,8 @@
 	"appId": "com.nuxt.test",
 	"appName": "nuxt-app",
 	"webDir": ".output/public",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"server": {
+		"hostname": "mobile.nuxt.com"
+	}
 }
