@@ -5,9 +5,11 @@ export default defineNuxtConfig({
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
-   */
-   ssr: false,
+  */
+  ssr: false,
 
-   // Target (https://go.nuxtjs.dev/config-target)
-   target: 'static',
+  // Target (https://go.nuxtjs.dev/config-target)
+  target: 'static',
+
+  buildModules: ['@nuxtjs/tailwindcss']
 })
