@@ -9,8 +9,8 @@ export default {
   methods: {
     async postClick () {
       this.clientClicks++;
-      const clickData = await $fetch("/api/click", {
-        method: "POST"
+      const clickData = await $fetch('/api/click', {
+        method: 'POST'
         // body: data
       });
       this.globalClicks = clickData.globalClicks;

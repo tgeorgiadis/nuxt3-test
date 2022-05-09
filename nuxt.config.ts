@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from 'nuxt';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -9,8 +9,8 @@ export default defineNuxtConfig({
   ssr: false,
 
   // Target (https://go.nuxtjs.dev/config-target)
-  target: "static",
+  target: 'static',
 
-  buildModules: ["@nuxtjs/tailwindcss"]
+  buildModules: ['@nuxtjs/tailwindcss']
 
 });
