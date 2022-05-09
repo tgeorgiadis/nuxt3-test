@@ -1,4 +1,11 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noImplicitThis": true
+  }
 }
