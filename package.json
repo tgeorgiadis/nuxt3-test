@@ -1,11 +1,22 @@
 {
+  "name": "nuxt-app",
+  "version": "1.0.0",
+  "main": "app.vue",
+  "repository": "git@github.com:tgeorgiadis/nuxt3-test.git",
+  "author": "Thomas Georgiadis <tgeorg94@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "lint": "eslint --ext .ts,.js,.vue ."
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "ionic:build": "yarn generate",
+    "ionic:serve": "yarn dev",
+    "ionic:run": "ionic capacitor run android --livereload --external",
+    "cap:android": "yarn generate && npx cap sync android && npx cap open android",
+    "cap:ios": "yarn generate && npx cap sync ios && npx cap open ios"
   },
   "devDependencies": {
     "@capacitor/cli": "^3.5.0",
@@ -23,11 +34,5 @@
     "@capacitor/android": "^3.5.0",
     "@capacitor/core": "^3.5.0",
     "@prisma/client": "^3.13.0"
-  },
-  "name": "nuxt-app",
-  "version": "1.0.0",
-  "main": "app.vue",
-  "repository": "git@github.com:tgeorgiadis/nuxt3-test.git",
-  "author": "Thomas Georgiadis <tgeorg94@gmail.com>",
-  "license": "MIT"
+  }
 }

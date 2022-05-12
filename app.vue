@@ -1,22 +1,17 @@
-<script lang="ts">
-export default {
-  data () {
-    return {
-      clientClicks: 0,
-      globalClicks: 0
-    };
-  },
-  methods: {
-    async postClick () {
-      this.clientClicks++;
-      const clickData = await $fetch('/api/click', {
-        method: 'POST'
-        // body: data
-      });
-      this.globalClicks = clickData.globalClicks;
-    }
-  }
+<script setup lang="ts">
+
+let clientClicks = $ref(0);
+let globalClicks = $ref(0);
+
+const postClick = async () => {
+  clientClicks++;
+  const clickData = await $fetch('/api/click', {
+    method: 'POST'
+    // body: data
+  });
+  globalClicks = clickData.globalClicks;
 };
+
 </script>
 
 <template>

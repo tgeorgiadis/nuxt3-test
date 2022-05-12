@@ -11,6 +11,8 @@ export default defineNuxtConfig({
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
-  buildModules: ['@nuxtjs/tailwindcss']
+  buildModules: ['@nuxtjs/tailwindcss'],
+
+  experimental: { reactivityTransform: true }
 
 });
