@@ -4,6 +4,7 @@
 	"webDir": ".output/public",
 	"bundledWebRuntime": false,
 	"server": {
-		"hostname": "mobile.nuxt.com"
+		"hostname": "mobile.nuxt.com",
+		"url": "http://172.21.192.1:8100"
 	}
 }

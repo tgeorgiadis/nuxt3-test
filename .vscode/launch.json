@@ -5,14 +5,53 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run and debug",
+      "name": "nuxt - client: chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "nuxt - server",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "run",
-        "dev"
+        "run", "dev"
+      ]
+    },
+    {
+      "name": "ionic nuxt - client: chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8100",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "ionic nuxt - server",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run", "ionic:run"
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "nuxt - fullstack",
+      "configurations": [
+        "nuxt - client: chrome",
+        "nuxt - server"
+      ]
+    },
+    {
+      "name": "ionic nuxt - fullstack",
+      "configurations": [
+        "ionic nuxt - client: chrome",
+        "ionic nuxt - server"
       ]
     }
   ]
