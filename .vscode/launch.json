@@ -5,14 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "nuxt - client: chrome",
+      "name": "Nuxt - Frontend with Chrome",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "nuxt - server",
+      "name": "Nuxt - Server",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -22,14 +22,14 @@
       ]
     },
     {
-      "name": "ionic nuxt - client: chrome",
+      "name": "Ionic Nuxt - Frontend with Chrome",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:8100",
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "ionic nuxt - server",
+      "name": "Ionic Nuxt - Server",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
@@ -37,21 +37,32 @@
       "runtimeArgs": [
         "run", "ionic:run"
       ]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug Current Test File",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "smartStep": true,
+      "console": "integratedTerminal"
     }
   ],
   "compounds": [
     {
-      "name": "nuxt - fullstack",
+      "name": "Nuxt - Fullstack",
       "configurations": [
-        "nuxt - client: chrome",
-        "nuxt - server"
+        "Nuxt - Frontend with Chrome",
+        "Nuxt - Server"
       ]
     },
     {
-      "name": "ionic nuxt - fullstack",
+      "name": "Ionic Nuxt - Fullstack",
       "configurations": [
-        "ionic nuxt - client: chrome",
-        "ionic nuxt - server"
+        "Ionic Nuxt - Frontend with Chrome",
+        "Ionic Nuxt - Server"
       ]
     }
   ]
